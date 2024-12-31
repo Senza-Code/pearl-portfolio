@@ -77,3 +77,74 @@ font a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Animations */ 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Apply Animation */
+
+header {
+    animation: fadeIn 2s ease-out;
+    background: linear-gradient(270deg, #4b6cb7, #182848);
+    background-size: 400% 400%;
+    animation: gradientFlow 8s ease infinite;
+}
+
+section {
+    animation: fadeIn 1.5s ease-out;
+}
+
+button {
+    background-color: #0f5247;
+    color: white;
+    padding: 10x 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0f5247;
+    transform: scale(1.1);
+}
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(120deg, #4b6cb7, #182848);
+    color: white;
+    margin-bottom: 30px;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
